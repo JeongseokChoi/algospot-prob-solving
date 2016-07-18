@@ -1,0 +1,6 @@
+﻿  BOARDCOVER.cpp
+c:\users\jeongseok\documents\visual studio 2015\projects\boardcover\boardcover\boardcover.cpp(55): warning C4018: '>=': signed/unsigned mismatch
+c:\users\jeongseok\documents\visual studio 2015\projects\boardcover\boardcover\boardcover.cpp(56): warning C4018: '>=': signed/unsigned mismatch
+c:\users\jeongseok\documents\visual studio 2015\projects\boardcover\boardcover\boardcover.cpp(73): warning C4018: '<': signed/unsigned mismatch
+c:\users\jeongseok\documents\visual studio 2015\projects\boardcover\boardcover\boardcover.cpp(75): warning C4018: '<': signed/unsigned mismatch
+  BOARDCOVER.vcxproj -> C:\Users\Jeongseok\Documents\Visual Studio 2015\Projects\BOARDCOVER\Debug\BOARDCOVER.exe

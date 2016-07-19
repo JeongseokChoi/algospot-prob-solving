@@ -1,6 +1,6 @@
 ﻿  CLOCKSYNC.cpp
-c:\users\jschoi\documents\visual studio 2015\projects\clocksync\clocksync\clocksync.cpp(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\repo\algospot-prob-solving\clocksync\clocksync\clocksync.cpp(69): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\jschoi\documents\visual studio 2015\projects\clocksync\clocksync\clocksync.cpp(74): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\repo\algospot-prob-solving\clocksync\clocksync\clocksync.cpp(76): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-  CLOCKSYNC.vcxproj -> c:\users\jschoi\documents\visual studio 2015\Projects\CLOCKSYNC\Debug\CLOCKSYNC.exe
+  CLOCKSYNC.vcxproj -> D:\repo\algospot-prob-solving\CLOCKSYNC\Debug\CLOCKSYNC.exe

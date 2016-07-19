@@ -1,0 +1,3 @@
+﻿  QUADTREE.c
+d:\repo\algospot-prob-solving\quadtree\quadtree\quadtree.c(30): warning C4133: '함수': 'QtreeNode_t *'과(와) 'QTree_t' 사이의 형식이 호환되지 않습니다.
+  QUADTREE.vcxproj -> D:\repo\algospot-prob-solving\QUADTREE\Debug\QUADTREE.exe

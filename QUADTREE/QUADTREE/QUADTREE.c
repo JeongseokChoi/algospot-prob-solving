@@ -3,7 +3,11 @@
 #include <string.h>
 
 
-
+typedef struct Node_t
+{
+    char data;
+    struct Node_t* child[4];
+} Node_t;
 
 
 int main(int argc, char* argv[])

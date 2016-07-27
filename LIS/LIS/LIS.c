@@ -11,17 +11,21 @@ int seq_sz;
 int cache[500];
 
 
-int find_lis(int from)
+int find_lis()
 {
-    if (cache[from] != 0)
-        return cache[from];
+    for (int i = seq_sz - 1; i >= 0; i--)
+    {
+        cache[i] = 1;
+        for (int j = i + 1; j < seq_sz; j++)
+            if (seq[j] > seq[i])
+                cache[i] = max(cache[i], cache[j] + 1);
+    }
 
-    cache[from] = 1;
-    for (int idx = from + 1; idx < seq_sz; idx++)
-        if (seq[from] < seq[idx])
-            cache[from] = max(cache[from], find_lis(idx) + 1);
-
-    return cache[from];
+    int ans = 0;
+    for (int i = 0; i < seq_sz; i++)
+        if (ans < cache[i])
+            ans = cache[i];
+    return ans;
 }
 
 
@@ -32,15 +36,18 @@ int main(int argc, char *argv[])
 
     for (int i_case = 0; i_case < n_case; i_case++)
     {
+        // initialize
         seq_sz = 0;
         memset(seq, 0, sizeof(seq));
         memset(cache, 0, sizeof(cache));
 
+        // get input
         scanf("%d", &seq_sz);
         for (int i = 0; i < seq_sz; i++)
             scanf("%d", &seq[i]);
 
-        printf("%d\n", find_lis(0));
+        // find & print answer
+        printf("%d\n", find_lis());
     }
 
     return 0;

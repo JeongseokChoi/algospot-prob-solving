@@ -1,11 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <cstring>
+using namespace std;
 
 
-#define TRUE  1
-#define FALSE 0
-#define INF   1122223333
+#define MIN2(x, y)      ((x) < (y))? (x) : (y)
+#define MIN3(x, y, z)   MIN2((x), MIN2((y), (z)))
+#define TRUE            1
+#define FALSE           0
+#define INF             1122223333
 
 
 char num[10001];
@@ -75,25 +77,23 @@ int get_solution()
   int num_len = strlen(num);
   for (int i = 5; i < num_len; i++)
   {
-    
+    cache[i] = MIN3(cache[i - 3] + classify(i - 2, 3),
+                    cache[i - 4] + classify(i - 3, 4),
+                    cache[i - 5] + classify(i - 4, 5));
   }
+  return cache[num_len - 1];
 }
 
 
 int main(int argc, char *argv[])
 {
-  char buf[1024];
   int n_case;
 
-  fgets(buf, 1024, stdin);
-  n_case = atoi(buf);
+  cin >> n_case;
   for (int i_case = 0; i_case < n_case; i_case++)
   {
-    fgets(buf, 1024, stdin);
-    buf[strlen(buf) - 1] = '\0';
-    strcpy(num, buf);
-
-    
+    cin >> num;
+    printf("%d\n", get_solution());
   }
 
   return 0;

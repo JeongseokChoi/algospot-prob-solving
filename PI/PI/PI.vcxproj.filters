@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PI.c">
+    <ClCompile Include="PI.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

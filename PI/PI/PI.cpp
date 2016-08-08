@@ -71,15 +71,18 @@ int classify(int start_idx, int len)
 int get_solution()
 {
   memset(cache, 0, sizeof(cache));
+  cache[0] = INF;
+  cache[1] = INF;
   cache[2] = classify(0, 3);
   cache[3] = classify(0, 4);
   cache[4] = classify(0, 5);
   int num_len = strlen(num);
   for (int i = 5; i < num_len; i++)
   {
-    cache[i] = MIN3(cache[i - 3] + classify(i - 2, 3),
-                    cache[i - 4] + classify(i - 3, 4),
-                    cache[i - 5] + classify(i - 4, 5));
+    int x = cache[i - 3] + classify(i - 2, 3);
+    int y = cache[i - 4] + classify(i - 3, 4);
+    int z = cache[i - 5] + classify(i - 4, 5);
+    cache[i] = MIN3(x, y, z);
   }
   return cache[num_len - 1];
 }
